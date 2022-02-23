@@ -1,0 +1,71 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/03/2021  11:15:32  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\Question3.obj TO .\Objects\newp PRINT (.\Listings\newp.m51) RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Question3.obj (QUESTION3)
+
+
+LINK MAP OF MODULE:  .\Objects\newp (QUESTION3)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     002BH     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\newp (QUESTION3)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        QUESTION3
+  D:00F0H         SYMBOL        B
+  C:0025H         SYMBOL        DELAY
+  C:0000H         SYMBOL        L
+  C:0028H         SYMBOL        L1
+  C:0000H         LINE#         65533
+  C:0002H         LINE#         2
+  C:0005H         LINE#         3
+  C:0006H         LINE#         4
+  C:0009H         LINE#         5
+  C:000AH         LINE#         6
+  C:000DH         LINE#         7
+  C:000EH         LINE#         8
+  C:000FH         LINE#         9
+  C:0011H         LINE#         10
+  C:0014H         LINE#         11
+  C:0015H         LINE#         12
+  C:0018H         LINE#         13
+  C:0019H         LINE#         14
+  C:001AH         LINE#         15
+  C:001CH         LINE#         16
+  C:001FH         LINE#         17
+  C:0020H         LINE#         18
+  C:0021H         LINE#         19
+  C:0023H         LINE#         20
+  C:0025H         LINE#         22
+  C:0026H         LINE#         23
+  C:0027H         LINE#         24
+  C:0028H         LINE#         25
+  C:002AH         LINE#         26
+  -------         ENDMOD        QUESTION3
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/03/2021  11:15:32  PAGE 2
+
+
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 002BH BYTE ( 2%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=43
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

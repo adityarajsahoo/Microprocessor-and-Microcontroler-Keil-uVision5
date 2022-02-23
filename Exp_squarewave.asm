@@ -1,0 +1,16 @@
+// Squarewave Program
+L:SETB P1.0
+ACALL DELAY
+CLR P1.0
+ACALL DELAY
+SJMP L
+
+DELAY: MOV TMOD,#10H
+       MOV TH1,#07DH
+	   MOV TL1,#0CBH
+	   SETB TR1
+   L1: JNB TF1,L1
+        CLR TR1
+        CLR TF1
+        RET
+	   

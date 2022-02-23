@@ -1,0 +1,2 @@
+Dependencies for Project 'New', Target 'Target 1': (DO NOT MODIFY !)
+F (.\subb.asm)(0x60B7EA4D)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil_v5\ARM\RV31\INC-I C:\Keil_v5\ARM\CMSIS\Include-I C:\Keil_v5\ARM\Inc\Philips--pd "__UVISION_VERSION SETA 516"--list .\listings\subb.lst --xref -o .\objects\subb.o --depend .\objects\subb.d)

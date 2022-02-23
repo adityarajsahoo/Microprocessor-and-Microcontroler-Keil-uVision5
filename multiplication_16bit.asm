@@ -1,0 +1,3 @@
+MOV A,#04H
+MOV B,#03H
+MUL AB

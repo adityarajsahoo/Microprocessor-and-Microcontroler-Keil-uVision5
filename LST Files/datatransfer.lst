@@ -1,0 +1,36 @@
+A51 MACRO ASSEMBLER  DATATRANSFER                                                         06/03/2021 02:21:03 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\datatransfer.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE datatransfer.asm SET(SMALL) DEBUG PRINT(.\Listings\datatransfer.lst) OB
+                      JECT(.\Objects\datatransfer.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+0000 906000            2     mov dptr,#6000h
+0003 7970              3     mov r1,#70h
+0005 7A05              4     mov r2,#05h
+0007 E4                5     l:clr A
+0008 93                6     movc A,@A+dptr
+0009 F7                7     mov @R1,A
+000A A3                8     inc dptr
+000B 09                9     inc r1
+000C DAF9             10     djnz r2,l
+                      11     end
+A51 MACRO ASSEMBLER  DATATRANSFER                                                         06/03/2021 02:21:03 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+L. . . . . . . . .  C ADDR   0007H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

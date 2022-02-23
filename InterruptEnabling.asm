@@ -1,0 +1,14 @@
+ORG 0000H
+	LJMP Main
+	
+    ORG 0013H
+		SETB P1.3
+		MOV R1,#15H
+		L1:DJNZ R1,L1
+		CLR P1.3
+		RETI
+		
+	ORG 0030H
+		Main:MOV IE,#84H
+		L: CLR P2.6
+		SJMP L

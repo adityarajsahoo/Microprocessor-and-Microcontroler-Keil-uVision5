@@ -1,0 +1,7 @@
+MOV A,#05H
+MOV B,#04H
+SUBB A,B
+JNC  L
+INC  R1
+L:
+END

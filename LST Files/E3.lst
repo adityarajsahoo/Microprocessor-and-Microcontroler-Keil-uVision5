@@ -1,0 +1,35 @@
+A51 MACRO ASSEMBLER  E3                                                                   06/03/2021 02:23:06 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\E3.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE E3.asm SET(SMALL) DEBUG PRINT(.\Listings\E3.lst) OBJECT(.\Objects\E3.ob
+                      j) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+0000 906000            2     mov dptr,#6000h
+0003 7970              3     mov r1,#70h
+0005 7A05              4     mov r2,#05h
+0007 E4                5     l:clr A
+0008 93                6     movc A,@A+dptr
+0009 A3                7     inc dptr
+000A 09                8     inc r1
+000B DAFA              9     djnz r2,l
+                      10     end
+A51 MACRO ASSEMBLER  E3                                                                   06/03/2021 02:23:06 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+L. . . . . . . . .  C ADDR   0007H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

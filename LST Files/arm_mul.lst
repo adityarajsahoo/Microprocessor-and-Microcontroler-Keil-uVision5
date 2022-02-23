@@ -1,0 +1,50 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             NEW,CODE,READONLY
+    2 00000000 E3A00004        MOV              R0,#0X04
+    3 00000004 E3A01001        MOV              R1,#0X01
+    4 00000008 E0020190        MUL              R2,R0,R1
+    5 0000000C EAFFFFFE 
+                       L       B                L
+    6 00000010         END
+                       
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\arm_mul.d -o.\objects\arm_mul.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\A
+RM\CMSIS\Include -IC:\Keil_v5\ARM\Inc\Philips --predefine="__EVAL SETA 1" --pre
+define="__UVISION_VERSION SETA 516" --list=.\listings\arm_mul.lst ARM_MUL.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+END 00000010
+
+Symbol: END
+   Definitions
+      At line 6 in file ARM_MUL.s
+   Uses
+      None
+Comment: END unused
+L 0000000C
+
+Symbol: L
+   Definitions
+      At line 5 in file ARM_MUL.s
+   Uses
+      At line 5 in file ARM_MUL.s
+Comment: L used once
+NEW 00000000
+
+Symbol: NEW
+   Definitions
+      At line 1 in file ARM_MUL.s
+   Uses
+      None
+Comment: NEW unused
+3 symbols
+335 symbols in table

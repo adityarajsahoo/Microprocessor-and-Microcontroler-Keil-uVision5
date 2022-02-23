@@ -1,0 +1,40 @@
+A51 MACRO ASSEMBLER  LEDEXPB                                                              05/06/2021 12:55:56 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\Ledexpb.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Ledexpb.asm SET(SMALL) DEBUG PRINT(.\Listings\Ledexpb.lst) OBJECT(.\Obj
+                      ects\Ledexpb.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+0000 7590BA            3     L:MOV P1,#0BAH
+0003 110C              4     ACALL DELAY
+0005 759000            5     MOV P1,#00H
+0008 110C              6     ACALL DELAY
+000A 80F4              7     SJMP L
+                       8     
+000C 7905              9     DELAY: MOV R1,#05H
+000E D9FE             10     L1: DJNZ R1,L1
+0010 22               11     RET
+                      12     END
+A51 MACRO ASSEMBLER  LEDEXPB                                                              05/06/2021 12:55:56 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY. . . . . . .  C ADDR   000CH   A   
+L. . . . . . . . .  C ADDR   0000H   A   
+L1 . . . . . . . .  C ADDR   000EH   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,49 @@
+A51 MACRO ASSEMBLER  CALCULATOR                                                           06/03/2021 02:29:03 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\calculator.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE calculator.asm SET(SMALL) DEBUG PRINT(.\Listings\calculator.lst) OBJECT
+                      (.\Objects\calculator.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7411              1     MOV A,#11H
+0002 75F012            2     MOV B,#12H
+0005 7801              3     MOV R0,#01H
+0007 B80104            4     CJNE R0,#01H,L1
+000A 25F0              5     ADD A,B
+000C 8019              6     SJMP L5
+000E B80204            7     L1: CJNE R0,#02H,L2
+0011 95F0              8     SUBB A,B
+0013 8012              9     SJMP L5
+0015 B80303           10     L2: CJNE R0,#03H,L3
+0018 A4               11     MUL AB
+0019 800C             12     SJMP L5
+001B B80404           13     L3: CJNE R0,#04H,L4
+001E 55F0             14     ANL A,B
+0020 8005             15     SJMP L5
+0022 B80502           16     L4: CJNE R0,#05H,L5
+0025 45F0             17     ORL A,B
+0027                  18     L5:
+                      19     END
+A51 MACRO ASSEMBLER  CALCULATOR                                                           06/03/2021 02:29:03 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+L1 . . . . . . . .  C ADDR   000EH   A   
+L2 . . . . . . . .  C ADDR   0015H   A   
+L3 . . . . . . . .  C ADDR   001BH   A   
+L4 . . . . . . . .  C ADDR   0022H   A   
+L5 . . . . . . . .  C ADDR   0027H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

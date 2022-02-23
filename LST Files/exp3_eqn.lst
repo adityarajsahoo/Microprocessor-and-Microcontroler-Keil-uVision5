@@ -1,0 +1,52 @@
+A51 MACRO ASSEMBLER  EXP3_EQN                                                             06/03/2021 02:13:04 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\exp3_eqn.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE exp3_eqn.asm SET(SMALL) DEBUG PRINT(.\Listings\exp3_eqn.lst) OBJECT(.\O
+                      bjects\exp3_eqn.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7403              1     MOV A,#03H
+0002 75F003            2     MOV B,#03H
+0005 A4                3     MUL AB
+0006 75F004            4     MOV B,#04H
+0009 A4                5     MUL AB
+000A F8                6     MOV R0,A
+000B 7402              7     MOV A,#02H
+000D 75F002            8     MOV B,#02H
+0010 A4                9     MUL AB
+0011 75F002           10     MOV B,#02H
+0014 A4               11     MUL AB
+0015 75F002           12     MOV B,#02H
+0018 A4               13     MUL AB
+0019 F9               14     MOV R1,A
+001A 7404             15     MOV A,#04H
+001C 75F008           16     MOV B,#08H
+001F A4               17     MUL AB
+0020 99               18     SUBB A,R1
+0021 28               19     ADD A,R0
+0022 75F005           20     MOV B,#05H
+0025 84               21     DIV AB
+                      22     
+                      23     
+                      24     
+                      25     
+                      26     
+*** WARNING #A41 IN 26 (exp3_eqn.asm, LINE 26): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  EXP3_EQN                                                             06/03/2021 02:13:04 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

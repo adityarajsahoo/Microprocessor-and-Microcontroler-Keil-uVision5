@@ -1,0 +1,45 @@
+A51 MACRO ASSEMBLER  INTERRUPTENABLING                                                    05/06/2021 12:46:39 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\InterruptEnabling.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE InterruptEnabling.asm SET(SMALL) DEBUG PRINT(.\Listings\InterruptEnabli
+                      ng.lst) OBJECT(.\Objects\InterruptEnabling.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 020030            2             LJMP Main
+                       3             
+0013                   4         ORG 0013H
+0013 D293              5                     SETB P1.3
+0015 7915              6                     MOV R1,#15H
+0017 D9FE              7                     L1:DJNZ R1,L1
+0019 C293              8                     CLR P1.3
+001B 32                9                     RETI
+                      10                     
+0030                  11             ORG 0030H
+0030 75A884           12                     Main:MOV IE,#84H
+0033 C2A6             13                     L: CLR P2.6
+0035 80FC             14                     SJMP L
+*** WARNING #A41 IN 14 (InterruptEnabling.asm, LINE 14): MISSING 'END' STATEMENT
+A51 MACRO ASSEMBLER  INTERRUPTENABLING                                                    05/06/2021 12:46:39 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+IE . . . . . . . .  D ADDR   00A8H   A   
+L. . . . . . . . .  C ADDR   0033H   A   
+L1 . . . . . . . .  C ADDR   0017H   A   
+MAIN . . . . . . .  C ADDR   0030H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  1 WARNING(S), 0 ERROR(S)

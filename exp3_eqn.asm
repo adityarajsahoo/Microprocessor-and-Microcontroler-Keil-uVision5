@@ -1,0 +1,26 @@
+MOV A,#03H
+MOV B,#03H
+MUL AB
+MOV B,#04H
+MUL AB
+MOV R0,A
+MOV A,#02H
+MOV B,#02H
+MUL AB
+MOV B,#02H
+MUL AB
+MOV B,#02H
+MUL AB
+MOV R1,A
+MOV A,#04H
+MOV B,#08H
+MUL AB
+SUBB A,R1
+ADD A,R0
+MOV B,#05H
+DIV AB
+
+//a = (4x^2 - 2y^3 +8z)/5;
+//x = 3;
+//y = 2;
+//z = 4;

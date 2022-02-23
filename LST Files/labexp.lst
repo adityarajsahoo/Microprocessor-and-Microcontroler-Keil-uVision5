@@ -1,0 +1,113 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 area             name,code,readonly
+    2 00000000 E0028008 
+                       io0dir  equ              0xe0028008
+    3 00000000 E0028000 
+                       io0pin  equ              0xe0028000
+    4 00000000         
+    5 00000000         start
+    6 00000000 E59F0034        ldr              r0,=io0dir
+    7 00000004 E3E01000        ldr              r1,=0xffffffff
+    8 00000008 E5801000        str              r1,[r0]
+    9 0000000C E59F202C        ldr              r2,=io0pin
+   10 00000010 E5821000        str              r1,[r2]
+   11 00000014 EB000004        bl               delay
+   12 00000018 E3A01000        ldr              r1,=0x0000000
+   13 0000001C E59F301C        ldr              r3,=io0pin
+   14 00000020 E5831000        str              r1,[r3]
+   15 00000024 EB000000        bl               delay
+   16 00000028 EAFFFFF4        b                start
+   17 0000002C         
+   18 0000002C         delay
+   19 0000002C E59F4010        ldr              r4,=0x0000fffff
+   20 00000030 E2544001 
+                       l       subs             r4,#01
+   21 00000034 1AFFFFFD        bne              l
+   22 00000038 E12FFF1E        bx               lr
+   23 0000003C         end
+                       
+              E0028008 
+              E0028000 
+              000FFFFF 
+Command Line: --debug --xref --diag_suppress=9931 --apcs=interwork --depend=.\o
+bjects\labexp.d -o.\objects\labexp.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM
+\CMSIS\Include -IC:\Keil_v5\ARM\Inc\Philips --predefine="__EVAL SETA 1" --prede
+fine="__UVISION_VERSION SETA 516" --list=.\listings\labexp.lst labexp.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+delay 0000002C
+
+Symbol: delay
+   Definitions
+      At line 18 in file labexp.s
+   Uses
+      At line 11 in file labexp.s
+      At line 15 in file labexp.s
+
+end 0000003C
+
+Symbol: end
+   Definitions
+      At line 23 in file labexp.s
+   Uses
+      None
+Comment: end unused
+l 00000030
+
+Symbol: l
+   Definitions
+      At line 20 in file labexp.s
+   Uses
+      At line 21 in file labexp.s
+Comment: l used once
+name 00000000
+
+Symbol: name
+   Definitions
+      At line 1 in file labexp.s
+   Uses
+      None
+Comment: name unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 5 in file labexp.s
+   Uses
+      At line 16 in file labexp.s
+Comment: start used once
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+io0dir E0028008
+
+Symbol: io0dir
+   Definitions
+      At line 2 in file labexp.s
+   Uses
+      At line 6 in file labexp.s
+Comment: io0dir used once
+io0pin E0028000
+
+Symbol: io0pin
+   Definitions
+      At line 3 in file labexp.s
+   Uses
+      At line 9 in file labexp.s
+      At line 13 in file labexp.s
+
+2 symbols
+341 symbols in table

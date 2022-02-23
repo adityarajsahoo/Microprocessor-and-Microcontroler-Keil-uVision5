@@ -1,0 +1,3 @@
+MOV A,05H
+MOV B,02H
+DIV AB

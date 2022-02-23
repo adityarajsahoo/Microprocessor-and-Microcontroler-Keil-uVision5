@@ -1,0 +1,55 @@
+A51 MACRO ASSEMBLER  QUESTION3                                                            06/03/2021 11:15:29 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\Question3.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Question3.asm SET(SMALL) DEBUG PRINT(.\Listings\Question3.lst) OBJECT(.
+                      \Objects\Question3.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7402              1     L:MOV A,#02H
+0002 75F002            2     MOV B,#02H
+0005 A4                3     MUL AB
+0006 75F002            4     MOV B,#02H
+0009 A4                5     MUL AB
+000A 75F006            6     MOV B,#06H
+000D A4                7     MUL AB
+000E F8                8     MOV R0,A
+000F 7403              9     MOV A,#03H
+0011 75F003           10     MOV B,#03H
+0014 A4               11     MUL AB
+0015 75F002           12     MOV B,#02H
+0018 A4               13     MUL AB
+0019 F9               14     MOV R1,A
+001A 7403             15     MOV A,#03H
+001C 75F003           16     MOV B,#03H
+001F A4               17     MUL AB
+0020 FA               18     MOV R2,A
+0021 1125             19     ACALL DELAY
+0023 80DB             20     SJMP L
+                      21     
+0025 28               22     DELAY: ADD A,R0
+0026 29               23     ADD A,R1
+0027 9A               24     SUBB A,R2
+0028 D9FE             25     L1: DJNZ R1,L1
+002A 22               26     RET
+                      27     END      
+A51 MACRO ASSEMBLER  QUESTION3                                                            06/03/2021 11:15:29 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+DELAY. . . . . . .  C ADDR   0025H   A   
+L. . . . . . . . .  C ADDR   0000H   A   
+L1 . . . . . . . .  C ADDR   0028H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

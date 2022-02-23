@@ -1,0 +1,3 @@
+".\Objects\Question3.obj" 
+TO ".\Objects\newp" 
+PRINT(".\Listings\newp.m51") RAMSIZE(256) 

@@ -1,0 +1,59 @@
+A51 MACRO ASSEMBLER  LEDEXPC                                                              05/06/2021 12:59:06 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02c
+OBJECT MODULE PLACED IN .\Objects\Ledexpc.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE Ledexpc.asm SET(SMALL) DEBUG PRINT(.\Listings\Ledexpc.lst) OBJECT(.\Obj
+                      ects\Ledexpc.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+0000 D290              3     L:SETB P1.0
+0002 1132              4     ACALL DELAY
+0004 C290              5     CLR P1.0
+0006 D291              6     SETB P1.1
+0008 1132              7     ACALL DELAY
+000A C291              8     CLR P1.1
+000C D292              9     SETB P1.2
+000E 1132             10     ACALL DELAY
+0010 C292             11     CLR P1.2
+0012 D293             12     SETB P1.3
+0014 1132             13     ACALL DELAY
+0016 C293             14     CLR P1.3
+0018 D294             15     SETB P1.4
+001A 1132             16     ACALL DELAY
+001C C294             17     CLR P1.4
+001E D295             18     SETB P1.5
+0020 1132             19     ACALL DELAY
+0022 C295             20     CLR P1.5
+0024 D296             21     SETB P1.6
+0026 1132             22     ACALL DELAY
+0028 C296             23     CLR P1.6
+002A D297             24     SETB P1.7
+002C 1132             25     ACALL DELAY
+002E C297             26     CLR P1.7
+0030 80CF             27     SJMP 1
+0032 7905             28     DELAY:MOV R1,#05H
+0034 D9FE             29     L1:DJNZ R1,L1
+0036 22               30     RET
+                      31     END
+A51 MACRO ASSEMBLER  LEDEXPC                                                              05/06/2021 12:59:06 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+DELAY. . . . . . .  C ADDR   0032H   A   
+L. . . . . . . . .  C ADDR   0000H   A   
+L1 . . . . . . . .  C ADDR   0034H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
